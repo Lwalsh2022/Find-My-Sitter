@@ -1,0 +1,24 @@
+{
+  "name": "find-my-sitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lwalsh2022/Find-My-Sitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lwalsh2022/Find-My-Sitter/issues"
+  },
+  "homepage": "https://github.com/Lwalsh2022/Find-My-Sitter#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0"
+  }
+}
