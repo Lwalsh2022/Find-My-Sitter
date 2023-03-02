@@ -1,0 +1,46 @@
+[
+   {
+    "firstName": "Max",
+    "lastName": "Smith",
+    "email": "msmith@gmail.com",
+    "children":[{
+      "age":3,
+      "specialNeeds":["peanut allergy"]
+    }]
+    
+   },
+
+   {
+    "firstName": "Leanne",
+    "lastName": "Parker",
+    "email": "opparker@yahoo.com",
+    "children":[{
+      "age": 2,
+      "specialNeeds": ["none"]},
+    { "age": 5,
+      "specialNeeds":["asthma, will need inhaler with you if you play outside"]}
+     
+]},
+   
+      {
+    "firstName": "Marisa",
+    "lastName": "Hobbs",
+    "email": "Marhobbs@gmail.com",
+    "children":[{
+      "age": "8 months",
+      "specialNeeds": "no medical issues, teething, will need Baby Tylenol at certain intervals."
+    }]
+   },
+
+   {
+    "firstName": "Robert",
+    "lastName": "Murphey",
+    "email": "rmurph@yahoo.com"
+   }, 
+
+   {
+    "firstName": "Grace",
+    "lastName": "Barber",
+    "email": "lgbarber@gmail.com "
+   } 
+]
