@@ -1,20 +1,26 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import About from './components/About';
-import Nav from './components/Nav';
-import Contact from './components/Contact';   
+// import About from './components/About';
+// import Contact from './components/Contact';   
 import Header from './components/Header';
-import Projects from './components/Projects';
+import LandingPage from './components/LandingPage';
+// import Projects from './components/Projects';
+import Sitters from './components/Sitters';
 
 
 function App() {
+
+
   return (
-    <div className="App">
-      <Header/>
-      <Nav/>
-      <About/>
-      <Projects/>
-      <Contact/> 
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/sitters" element={<Sitters />} />
+      </Routes>
+    </Router>
+
   );
 }
 
