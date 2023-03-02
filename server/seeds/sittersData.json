@@ -1,0 +1,46 @@
+[
+    {
+        "firstName":"Mary",
+        "lastName":"Jones",
+        "email":"mjjones@yahoo.com",
+        "experience":"Three years as lead teacher at St. James Preschool, Greensboro, NC. I have worked with children ages 2-5, and then did my student teaching in Second Grade. I began babysitting when I was 13 and have worked with families of children who have special needs and ages infant to preteen.",
+        "certification":"BA in Elementary Ed, UNCG",
+        "reviews":"???"
+    },
+
+    {
+        "firstName":"Pamela",
+        "lastName":"Norris",
+        "email":"pmnorris@gmail.com",
+        "experience":"I have worked as an After School assistant for 3 years at Millis Elementary in Raleigh, NC. I am currently attending NC State to receive my degree in Early Childhood Education. Years of experience babysitting children ages 3 to 12. ",
+        "certification":"CPR License",
+        "reviews":""
+    },
+
+    {
+        "firstName":"James",
+        "lastName":"Spencer",
+        "email":"jspence@yahoo.com",
+        "experience":"Soccer Coach for local soccer league, lifeguard at YMCA, BA in Elementary Ed, UNCCH. Began my own soccer club for students after school at Jones Elementary, Chapel Hill.",
+        "certification":"CPR License, BA Degree",
+        "reviews":""
+    },
+
+    {
+        "firstName":"Alyssa",
+        "lastName":"Moore",
+        "email":"moorea@yahoo.com",
+        "experience":"Nursing student at Duke, focused my rotations with pediatrics, worked as a Nanny for Great AuPair for past two summers, lots of experience with children ages 1 month to 10 years.",
+        "certification":"CPR License, CNA",
+        "reviews":""
+    },
+
+    {
+        "firstName":"June",
+        "lastName":"Lewis",
+        "email":"jlewis1@gmail.com",
+        "experience":"Worked with youth theater adventure in my hometown, Wilmington, NC for past 3 summers. I am a student at NC State as an Early Education major. I volunteer at the hospital in Pediatrics biweekly and I help with the nursery at my church.",
+        "certification":"",
+        "reviews":""
+    }
+]
