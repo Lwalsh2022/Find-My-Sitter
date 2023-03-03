@@ -16,6 +16,11 @@ db.once('open', async () => {
   const sitters = await Sitters.insertMany(sittersData);
   const reviews = await Reviews.insertMany(reviewsData);
 
+  sitters.forEach(sitter,index => {
+    const review = reviews[index]._id
+    sitter.reviews.push(review)
+    sitter.save()
+  });
 
   console.log('all done!');
   process.exit(0);
