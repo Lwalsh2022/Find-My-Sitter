@@ -19,7 +19,15 @@ const reviewsSchema = new Schema(
     rating: {
         type: Number,
         required: true
-    }
+    },
+    sitter: {
+      type: Schema.Types.ObjectId,
+      ref: 'Sitters',
+    },
+    parent: {
+      type: Schema.Types.ObjectId,
+      ref: 'Parents',
+    },
   }
 );
 

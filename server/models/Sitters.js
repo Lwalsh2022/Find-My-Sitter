@@ -25,7 +25,7 @@ const sittersSchema = new Schema(
     reviews: [
         {
             type: Schema.Types.ObjectID,
-            ref: "review"
+            ref: "Reviews"
         }
     ]
   }
