@@ -1,18 +1,38 @@
 
 
+/***************
+* Header
+****************/
 
+/* #header {
+  background-color: rgb(21, 21, 21);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+} */
 
-/* Header Styles */
-#header {
-  height: 20px;
-  background-color: gray;
+#navBar {
+  background-color: #424f5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 80px;
+  margin: 50px;
+  border-radius: 20px;
+  border: 1px solid black;
+  color: #e8e7e6
+
 }
+
 
 /* Landing Page Styles */
 #posts {
   border: 1px solid black;
   border-radius: 20px;
-  background-color: rgb(231, 244, 255);
+  background-color: #8c9caa;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +41,8 @@
 }
 
 .singlePost {
-  background-color: white;
+  background-color: #e8e7e6;
+  opacity: 95%;
   border: 0.5px solid black;
   border-radius: 20px;
   width: 33%;
