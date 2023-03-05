@@ -13,27 +13,32 @@ const LandingPage = () => {
     {
       id: 1,
       title: 'Babysitter needed Friday night',
+      description: 'I need a babysitter for my 2 year old son on Friday night from 7-9 pm. I will put him to sleep before you arrive.',
       author: 'Lisa'
     },
     {
       id: 2,
       title: 'Babysitter needed Saturday night',
-      author: 'Erich'
+      description: 'I am looking for a sitter for 3 kids ages 2, 4, and 6 on Saturday, March 11th from 6-10 pm.',
+      author: 'Megan'
     },
     {
       id: 3,
       title: 'Need babysitter for 2 hours on Sunday',
-      author: 'Joe'
+      description: 'I need a babysitter for my 4 year old son on Sunday, March 12th from 1-4 pm.',
+      author: 'Matt'
     },
     {
       id: 4,
       title: 'Babysitter needed next Friday night',
-      author: 'Mary'
+      description: 'I need a babysitter for my 2 year old son on Friday, march 10th from 7-9 pm. He will be asleep when you arrive.',
+      author: 'Gaye'
     },
     {
       id: 5,
       title: 'Babysitter needed for graduation',
-      author: 'No Name'
+      description: 'I am looking for a sitter for 3 kids ages 2, 5, and 7 on Saturday, March 11th from 6-10 pm.',
+      author: 'Miguel'
     }
 
    ])
@@ -51,6 +56,7 @@ const LandingPage = () => {
         {currentPosts.map((post) => (
           <div className='singlePost'>
             <h2>{post.title}</h2>
+            <p>{post.description}</p>
             <p>Posted by: {post.author}</p>
           </div>
         ))}
