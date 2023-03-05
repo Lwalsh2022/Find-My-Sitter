@@ -15,16 +15,21 @@
 
 #navBar {
   background-color: #424f5c;
+  color: #e8e7e6;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   padding: 80px;
   margin: 50px;
   border-radius: 20px;
   border: 1px solid black;
-  color: #e8e7e6
+}
 
+.site-title {
+  color: inherit;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
 
