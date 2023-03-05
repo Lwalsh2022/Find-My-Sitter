@@ -32,6 +32,12 @@ const parentsSchema = new Schema(
         required: true,
         trim: true
     },
+    posts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Posts"
+      }
+    ],
     children:[childSchema]
   },
   {
