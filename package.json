@@ -2,10 +2,13 @@
   "name": "find-my-sitter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "seed": "cd server && node seeds/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start"
+    "start": "node server.js",
+    "dev": "npx concurrently \"nodemon server.js\" \"cd client && npm start\""
+    
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,13 @@
   },
   "homepage": "https://github.com/Lwalsh2022/Find-My-Sitter#readme",
   "dependencies": {
+    "apollo-server": "^3.11.1",
+    "apollo-server-express": "^3.11.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^7.0.0",
+    "nodemon": "^2.0.20"
   }
 }

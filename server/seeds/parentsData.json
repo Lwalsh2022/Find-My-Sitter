@@ -1,0 +1,58 @@
+[
+   {
+    "firstName": "Max",
+    "lastName": "Smith",
+    "email": "msmith@gmail.com",
+    "children":[{
+      "age": 3,
+      "specialNeeds":["peanut allergy"]
+    }]
+    
+   },
+
+   {
+    "firstName": "Leanne",
+    "lastName": "Parker",
+    "email": "opparker@yahoo.com",
+    "children":[{
+      "age": 2,
+      "specialNeeds": ["none"]},
+    { "age": 5,
+      "specialNeeds":["asthma, will need inhaler if you play outside, will have more directions when you arrive"]}
+     
+]},
+   
+      {
+    "firstName": "Marisa",
+    "lastName": "Hobbs",
+    "email": "Marhobbs@gmail.com",
+    "children":[{
+      "age": "1",
+      "specialNeeds":["no medical issues, but going through teething, will need Baby Tylenol at certain intervals."]
+    }]
+   },
+
+   {
+    "firstName": "Robert",
+    "lastName": "Murphey",
+    "email": "rmurph@yahoo.com",
+    "children":[{
+      "age": 9,
+      "specialNeeds":["Our son is diabetic, independent with insulin pump, will give sitter detailed instructions"]},
+     {"age": 6,
+      "specialNeeds":["none"]
+      }]
+   }, 
+
+   {
+    "firstName": "Grace",
+    "lastName": "Barber",
+    "email": "lgbarber@gmail.com ",
+    "children":[{
+      "age": 1,
+      "specialNeeds":["none"]},
+   {
+      "age": 5,
+      "specialNeeds":["allergic to cow milk, must drink soy instead"]}]
+   } 
+]
