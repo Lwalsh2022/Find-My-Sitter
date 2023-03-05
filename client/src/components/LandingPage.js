@@ -52,7 +52,7 @@ const LandingPage = () => {
 
       <div id='posts'>
         <h1> Latest Jobs </h1>
-        <Link to={{pathname: `/sitters`, data: currentPosts }}>Visit Sitters Page</Link>
+        {/* <Link to={{pathname: `/sitters`, data: currentPosts }}>Visit Sitters Page</Link> */}
         {currentPosts.map((post) => (
           <div className='singlePost'>
             <h2>{post.title}</h2>
