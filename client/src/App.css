@@ -14,7 +14,7 @@
 } */
 
 #navBar {
-  background-color: rgb(230, 226, 226);
+  background-color: #424f5c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,6 +23,7 @@
   margin: 50px;
   border-radius: 20px;
   border: 1px solid black;
+  color: #e8e7e6
 
 }
 
@@ -31,7 +32,7 @@
 #posts {
   border: 1px solid black;
   border-radius: 20px;
-  background-color: rgb(213, 228, 240);
+  background-color: #8c9caa;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +41,8 @@
 }
 
 .singlePost {
-  background-color: white;
+  background-color: #e8e7e6;
+  opacity: 95%;
   border: 0.5px solid black;
   border-radius: 20px;
   width: 33%;
