@@ -55,5 +55,5 @@ const PostSchema = new Schema ({
         id: false
 });
 
-const Post = model('Post', PostSchema);
-module.exports = Post;
+const Posts = model('Posts', PostSchema);
+module.exports = Posts;

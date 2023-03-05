@@ -35,7 +35,7 @@ const parentsSchema = new Schema(
     posts: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Post"
+        ref: "Posts"
       }
     ],
     children:[childSchema]
