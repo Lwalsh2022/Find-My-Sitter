@@ -1,6 +1,7 @@
 const express = require('express');
 // Import the ApolloServer class
 const { ApolloServer } = require('apollo-server-express');
+const cors = require('cors');
 
 // Import the two parts of a GraphQL schema
 const { typeDefs, resolvers } = require('./server/schemas');
@@ -14,6 +15,7 @@ const server = new ApolloServer({
 
 const app = express();
 
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

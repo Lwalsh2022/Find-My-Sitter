@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.7.9",
     "@react-navigation/material-top-tabs": "^6.6.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
@@ -10,7 +11,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "expo": "^48.0.5",
+    "find-my-sitter": "file:..",
     "framer-motion": "^10.0.1",
+    "graphql": "^15.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native-tab-view": "^3.5.1",

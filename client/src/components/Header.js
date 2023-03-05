@@ -10,11 +10,13 @@ function Header(){
                 {/* <div className="logo">  
                     <img src={LisaWalshPhotographyWhiteTextHeader} id= "signaturelogo" alt="logo"></img>  
                 </div>   */}
-                <div id="navLinkContainer" className="left">  
+                <div id="navLinkContainer" className="left flex gap-5">  
                     {/* <a href="#">Home</a>   */}
                     <a href="#right flex-1">Home</a>  
                     <a href="#socials">Sitters Page</a>
                     <a href="#container">Contact</a>  
+                    <a href="/register/">Register parent</a>
+                    <a href="/register/sitter">Register sitter</a>
                 </div>  
             </nav>
         </div>

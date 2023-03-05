@@ -7,8 +7,7 @@
     "seed": "cd server && node seeds/seeds.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "npx concurrently \"nodemon server.js\" \"cd client && npm start\""
-    
+    "dev": "npx concurrently \"nodemon server.js\" \"cd client && npm start\" -k"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
   "dependencies": {
     "apollo-server": "^3.11.1",
     "apollo-server-express": "^3.11.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "graphql": "^16.6.0",
