@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
 import { Link } from 'react-router-dom';
+
+
 // use the prompt 'rafce' to make a boilerplate for a functional component
 
 const LandingPage = () => {
-
+ 
   // eventually this will be a fetch request to the backend
   // also, once you get data from the database about latest jobs, you will want to limit the results
   const [currentPosts, setCurrentPosts] = useState([
@@ -39,9 +41,9 @@ const LandingPage = () => {
 
   return (
     <>
-      <div id='header'></div>
+      <div id='header' className='right flex-1'></div>
       <Nav />
-      <h1> Welcome! </h1>
+      {/* <h1> Welcome to Find A Sitter! <span></span> </h1> */}
 
       <div id='posts'>
         <h1> Latest Jobs </h1>
