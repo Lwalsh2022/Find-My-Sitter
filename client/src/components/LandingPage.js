@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form  from 'react-bootstrap/Form';
+
 
 
 // use the prompt 'rafce' to make a boilerplate for a functional component
@@ -15,16 +18,16 @@ const LandingPage = () => {
       title: 'Babysitter needed Friday night',
       description: 'I need a babysitter for my 2 year old son on Friday night from 7-9 pm. I will put him to sleep before you arrive.',
       author: 'Lisa',
-      date: '3/5/2023',
-      time: '7:16 PM'
+      date: 'March 6th',
+      time: '7:10 pm'
     },
     {
       id: 2,
       title: 'Babysitter needed Saturday night',
       description: 'I am looking for a sitter for 3 kids ages 2, 4, and 6 on Saturday, March 11th from 6-10 pm.',
       author: 'Megan',
-      date: '3-5-23',
-      time: '5:23 PM'
+      date: 'March 6th',
+      time: '5:56 pm'
     },
     {
       id: 3,
@@ -39,16 +42,16 @@ const LandingPage = () => {
       title: 'Babysitter needed next Friday night',
       description: 'I need a babysitter for my 2 year old son on Friday, march 10th from 7-9 pm. He will be asleep when you arrive.',
       author: 'Gaye',
-      date: '3-3-23',
-      time: '12:06 PM'
+      date: 'March 5th',
+      time: '8:04 pm'
     },
     {
       id: 5,
       title: 'Babysitter needed for graduation',
       description: 'I am looking for a sitter for 3 kids ages 2, 5, and 7 on Saturday, March 11th from 6-10 pm.',
       author: 'Miguel',
-      date: '3-1-23',
-      time: '9:36 PM'
+      date: 'March 4th',
+      time: '9:56 pm'
     }
 
    ])
@@ -60,17 +63,59 @@ const LandingPage = () => {
       <Nav />
       {/* <h1> Welcome to Find A Sitter! <span></span> </h1> */}
 
-      <div id='posts'>
-        <h1> Latest Jobs </h1>
-        {/* <Link to={{pathname: `/sitters`, data: currentPosts }}>Visit Sitters Page</Link> */}
-        {currentPosts.map((post) => (
-          <div className='singlePost'>
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-            <p>Posted by: {post.author} 
-            {post.date} {post.time}</p>
+      <div id='landingPageBoxes'>
+        <div id='loginForms'>
+          <div id='signInBox'>
+            <h1> Sign In </h1>
+            <Form className="formInfo" id="signInForm">
+                <Form.Group controlId="formEmail" className="formItem">
+                  <Form.Label>Email address</Form.Label> 
+                  <Form.Control placeholder="Enter email" />
+                </Form.Group>
+                <Form.Group controlId="formPassword" className="formItem">
+                  <Form.Label>Password</Form.Label> 
+                  <Form.Control placeholder="Enter password" />
+                </Form.Group>
+                <Button variant="secondary" type="submit" id="signupSubmit">
+                  Sign In
+                </Button>
+            </Form>
           </div>
-        ))}
+          <div id='signUpBox'>
+            <h1> Sign Up </h1>
+            <Form className="formInfo" id="signUpForm">
+                <Form.Group controlId="formEmail" className="formItem">
+                  <Form.Label>Email address</Form.Label> 
+                  <Form.Control placeholder="Enter email" />
+                </Form.Group>
+                <Form.Group controlId="formName" className="formItem">
+                  <Form.Label>Name</Form.Label> 
+                  <Form.Control placeholder="Enter name" />
+                </Form.Group>
+                <Form.Group controlId="formPassword" className="formItem">
+                  <Form.Label>Password</Form.Label> 
+                  <Form.Control placeholder="Enter password" />
+                </Form.Group>
+                <Button variant="secondary" type="submit" id="signupSubmit">
+                  Sign Up
+                </Button>
+            </Form>
+          </div>
+
+
+        </div>
+        <div id='posts'>
+          <h1> Latest Jobs </h1>
+          {/* <Link to={{pathname: `/sitters`, data: currentPosts }}>Visit Sitters Page</Link> */}
+          {currentPosts.map((post) => (
+            <div className='singlePost'>
+              <h2>{post.title}</h2>
+              <p>{post.description}</p>
+              <p>Posted by: {post.author}</p>
+              <p>Posted on: {post.date} at: {post.time}</p>
+            </div>
+          ))}
+        </div>
       </div>
     
     </>
