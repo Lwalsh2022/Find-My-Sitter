@@ -15,29 +15,34 @@
 
 #navBar {
   background-color: #424f5c;
+  color: #e8e7e6;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
-  padding: 80px;
-  margin: 50px;
-  border-radius: 20px;
+  padding: 45px;
+  margin: 25px;
+  border-radius: 10px;
   border: 1px solid black;
-  color: #e8e7e6
+}
 
+.site-title {
+  color: inherit;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
 
 /* Landing Page Styles */
 #posts {
   border: 1px solid black;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #8c9caa;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 50px;
+  margin: 25px;
 }
 
 .singlePost {

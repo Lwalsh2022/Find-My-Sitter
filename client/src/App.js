@@ -9,6 +9,9 @@ import LandingPage from './components/LandingPage';
 // import Projects from './components/Projects';
 import Sitters from './components/Sitters';
 import styled from 'styled-components';
+import navBar from './components/Nav';
+
+// code for login form
 
 const AppContainer = styled.div`
   width: 100%;
@@ -34,10 +37,12 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* <Route path="/" element={<navBar />} /> */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/sitters" element={<Sitters />} />
       </Routes>
     </Router>
+    
      
 
   );
