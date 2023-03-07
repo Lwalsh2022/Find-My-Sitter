@@ -91,7 +91,7 @@ const LandingPage = () => {
                 </Form.Group>
                 <Form.Group controlId="formName" className="formItem">
                   <Form.Label></Form.Label> 
-                  <Form.Control placeholder="Enter Username" />
+                  <Form.Control placeholder="Enter Name" />
                 </Form.Group>
                 <Form.Group controlId="formPassword" className="formItem">
                   <Form.Label></Form.Label> 
@@ -101,7 +101,7 @@ const LandingPage = () => {
                   I'm A Parent
                 </Button>
                 <Button variant="secondary" type="submit" id="signupSubmit">
-                  I'm A Sitter
+                  I'm A Sitter  
                 </Button>
             </Form>
           </div>

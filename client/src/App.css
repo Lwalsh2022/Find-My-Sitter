@@ -90,6 +90,11 @@
 
 #signUpBox h1 {
   text-align: center;
+  
+}
+
+#signupSubmit {
+  margin: 10px;
 }
 
 .formInfo {
