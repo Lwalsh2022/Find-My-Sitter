@@ -1,8 +1,12 @@
 import React, { useState} from 'react'
-import Nav from './Nav'
+import Nav from './sitterNav'
 import { useLocation } from 'react-router-dom';
 import pfp from '../imgs/profileicon.jpg'
 import '../sitter.css'
+import Button from 'react-bootstrap/Button';
+import Form  from 'react-bootstrap/Form';
+
+
 
 const Sitters = (props) => {
 
@@ -53,51 +57,74 @@ const Sitters = (props) => {
   return (
     <>
       <div className='header'>
-
+      <div><Nav /></div>
         <h1 className='headerSize'> Sitter Profile </h1>
-      </div> 
-      <div className='navBar'>
-        <h3 className='navBorder'><Nav /></h3>
       </div>
-      {/* prfile picture / name / email code  */}
-      <div className='flexPicture'>
-        <img src={pfp} alt = "profile picture"></img>
-        <div className='picName'> 
-          {currentName.map((post) => (
-            <div>
-              <h1>{post.firstName} {post.lastName}</h1>
-              <h1 className='email'>{post.email}</h1>
+      <div className='textinputFlex'>  
+        {/* prfile picture / name / email code  */}
+        <div className='backGround'>
+          <div className='flexPicture'>
+            <img src={pfp} alt = "profile picture"></img>
+            <div className='picName'> 
+              {currentName.map((post) => (
+                <div>
+                  <h1>{post.firstName} {post.lastName}</h1>
+                  <h1 className='email'>{post.email}</h1>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          {/* certification code */}
+          <div className='info'>        
+            <div className='cert'>
+              <h1> Certifications </h1>
+              {Certification.map((post) => (
+                <div>
+                  <li>{post.certification}</li>
+                </div>
+              ))}
+          </div>
+            {/* experience code  */}
+            <div className='exp'>
+              <h1> Experience </h1>
+              {Experience.map((post) => (
+                <div>
+                  <li>{post.experience}</li>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-      {/* certification code */}
-      <div className='info'>        
-        <div className='cert'>
-          <h1> Certifications </h1>
-          {Certification.map((post) => (
-            <div>
-              <li>{post.certification}</li>
-            </div>
-          ))}
-        </div>
-        {/* experience code  */}
-        <div className='exp'>
-          <h1> Experience </h1>
-          {Experience.map((post) => (
-            <div>
-              <li>{post.experience}</li>
-            </div>
-          ))}
+        <div className='inputFlex'>
+          <div className='certInputMargin'>
+            <h3>Certification</h3>
+            <Form.Group className="certInput">
+              <Form.Label>Enter Certifications</Form.Label> 
+              <Form.Control className="djpad" placeholder="Enter Certifications" />
+            </Form.Group>
+            <button variant="secondary" type="submit" className='button'>
+              Submit Certifications
+            </button>
+          </div>
+          <div className='expInputMargin'>
+            <h3>Experience</h3>
+            <Form.Group className="expInput">
+              <Form.Label>Enter Experience</Form.Label> 
+              <Form.Control placeholder="Enter Experience" />
+            </Form.Group>
+            <button variant="secondary" type="submit" className='button'>
+              Submit Experiences
+            </button>
+          </div>
         </div>
       </div>
       {/* reviews code */}
       <div className='reviews'>
         <h1> Reviews </h1>
         {currentReview.map((post) => (
-          <div className='singlePost'>
-            <h2>{post.review}</h2>
-            <p>Posted by: {post.author}</p>
+          <div className='sitterReviews'>
+            <h6>Posted by: {post.author}</h6>
+            <p>{post.review}</p>
           </div>
         ))}
       </div>
