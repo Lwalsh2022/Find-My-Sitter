@@ -24,6 +24,24 @@
   margin: 25px;
   border-radius: 10px;
   border: 1px solid black;
+  text-decoration: none;
+}
+
+
+.headerImage {
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  color: #424f5c
+}
+
+.headerImage img {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  border-color: none;
+  background-color: gray;
 }
 
 .site-title {
@@ -34,7 +52,61 @@
 
 
 /* Landing Page Styles */
+#landingPageBoxes {
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+}
+
+#loginForms {
+  width: 30%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#signInBox {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #8c9caa;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#signInBox h1 {
+  text-align: center;
+}
+
+#signUpBox {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #8c9caa;
+  width: 100%;
+  padding: 10px;
+}
+
+#signUpBox h1 {
+  text-align: center;
+}
+
+.formInfo {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formItem {
+  margin: 10px;
+  width: 100%;
+}
+
 #posts {
+  width: 70%;
   border: 1px solid black;
   border-radius: 10px;
   background-color: #8c9caa;
@@ -42,15 +114,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 25px;
+  margin-left: 15px;
+  padding: 10px;
 }
 
 .singlePost {
-  background-color: #e8e7e6;
+  background-color: white;
   opacity: 95%;
   border: 0.5px solid black;
   border-radius: 20px;
-  width: 33%;
+  width: 90%;
   margin: 10px;
   padding: 15px;
 }
