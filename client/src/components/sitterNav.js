@@ -9,8 +9,8 @@ function sitterNav(){
     return(
         <div>
             <div id='navSitter'>
-  <Link to={{pathname: `/`}} className="headerImage"><img src={HomeImg} alt="Home Image"></img></Link>
-  <Link to={{pathname: `/sitters`}} className="headerImage"><img src={SitterImg} alt="babysitter image"></img></Link>
+  <Link to={{pathname: `/`}}><img src={HomeImg} alt="Home Image"></img></Link>
+  <Link to={{pathname: `/sitters`}}><img src={SitterImg} alt="babysitter image"></img></Link>
             </div>
         </div>
     )
