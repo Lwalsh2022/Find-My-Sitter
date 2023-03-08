@@ -14,16 +14,18 @@ const typeDefs = gql`
       postTitle: String
       postText: String
       email: String
+      userName: String
       hourlyRate: Int
       numberOfChildren: Int
       specialNeeds: String
+      user: User
     }
     
     type Query {
       users: [User]
       posts: [Post]
       user(id: ID!): User
-      user(id: ID!): [Post]
+      # user(id: ID!): [Post]
       post(id: ID!): Post
     }
 

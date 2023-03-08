@@ -37,11 +37,11 @@ const resolvers = {
       return await User.findOneAndDelete({ id });
     },
 
-    addPost: async (parent, { postTitle, postText, email, hourlyRate, numberOfChildren, specialNeeds }) => {
-      return await Post.create({ postTitle, postText, email, hourlyRate, numberOfChildren, specialNeeds});
+    addPost: async (parent, { postTitle, postText, email, userName, hourlyRate, numberOfChildren, specialNeeds }) => {
+      return await Post.create({ postTitle, postText, email, userName, hourlyRate, numberOfChildren, specialNeeds});
     },
 
-    updatePost: async (parent, { id, postTitle, postText, email, hourlyRate, numberOfChildren, specialNeeds}) => {
+    updatePost: async (parent, { id, postTitle, postText, email, userName, hourlyRate, numberOfChildren, specialNeeds}) => {
       return await Post.findOneAndUpdate(
         { _id: id },
         { postTitle},
