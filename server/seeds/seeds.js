@@ -1,26 +1,27 @@
 const db = require('../config/connection');
-const { Parents, Sitters, Reviews } = require('../models');
+const { User, Post } = require('../models');
 
-const parentsData = require('./parentsData.json');
-const sittersData = require('./sittersData.json');
-const reviewsData = require('./reviewsData.json');
+const usersData = require('./usersData.json');
+const postsData = require('./postData.json');
 
 db.once('open', async () => {
   // clean database
-  await Parents.deleteMany({});
-  await Sitters.deleteMany({});
-  await Reviews.deleteMany({});
+  await User.deleteMany({});
+  await Post.deleteMany({});
 
   // bulk create each model
-  const parents = await Parents.insertMany(parentsData);
-  const sitters = await Sitters.insertMany(sittersData);
-  const reviews = await Reviews.insertMany(reviewsData);
+  await User.insertMany(usersData);
+  const allPosts = await Post.insertMany(postsData);
 
-  sitters.forEach((sitter,index) => {
-    const review = reviews[index]._id
-    sitter.reviews.push(review)
-    sitter.save()
-  });
+  // attach posts to users within the database by username
+  for (newPost of allPosts) {
+    const [user] = await User.find({ userName: newPost.userName });
+    console.log(user);
+    user.posts.push(newPost._id);
+    newPost.user = user._id;
+    newPost.save();
+    user.save();
+  };
 
   console.log('all done!');
   process.exit(0);

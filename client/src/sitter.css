@@ -7,9 +7,13 @@ body    {
 
 /* sitter profile header */
 .header {
+
     /* background-color: 858c93; */
     /* border-style: solid; */
     /* border-top: 10px;
+    background-color: #424f5c;
+    border-style: solid;
+    border-top: 10px;
     border-left: 10px;
     border-right: 10px;
     border-width: 3px; */
@@ -19,13 +23,20 @@ body    {
     /* font-size: 50px;
     display: flex;
     flex-wrap: wrap;
+
     margin: 20;
     color: black;
     padding: 20px; */
+    margin: 0;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-left: 5%;
+
     
 }
 
 /* Nav bar */
+
 .navBar {
     /* display: flex;
     flex-direction: row-reverse;
@@ -39,6 +50,31 @@ body    {
     border-width: 3px;
     border-radius: 3px;
     border-top: 10px; */
+#navSitter {
+    background-color: #424f5c;
+    color: #e8e7e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5%;
+    margin-left: 78%;
+}
+
+#navSitter img {
+    width: 100px;
+}
+
+.backGround {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #8c9caa;
+    margin: 2%;
+    padding-bottom: 5%;
+    display: flex;
+    
 }
 
 /* profile picture */
@@ -53,18 +89,30 @@ img {
 
 .flexPicture {
     display: flex;
+    padding-top: 3%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #8c9caa;
+    margin: 2%;
 }
 
 /* Users Name and Email*/
 .picName {
     display: flex;
-    font-size: 30px;
-    margin-left: 20px;
+    margin-left: 40px;
+    padding-top: 5%;
+    padding-left: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameSize {
+    font-size: 60px;
 }
 
 /* Email */
 .email {
-    font-size: 20px;
+    font-size: 40px;
 }
 
 /* Certifications */
@@ -100,11 +148,58 @@ img {
 /* Lets certification and experience be side by side */
 .info {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin-left: 5%;
+    margin-top: 4%;
+    width: 2%;
+    padding: 10px;
+    
 }
 
+/* Text box flex */
+/* .textinputFlex {
+    display: flex;
+    margin-bottom: 7%;
+}
+
+.inputFlex {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #8c9caa;
+    padding: 10px;
+    margin-top: 7%;
+}
+
+.certInput {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #f9fafb;
+}
+
+.certInputMargin {
+    margin-bottom: 50%;
+}
+
+.expInput {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #f9fafb;
+    margin-top: 20px;
+    
+}
+
+.button {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #000;
+} */
+
 /* Reviews */
-.reviews {
+/* .reviews {
     display: flex;
     flex-direction: column;
     margin: 40px;
@@ -117,3 +212,16 @@ img {
     margin-top: 20px;
     background-color: #e0e7ed;
 }
+
+.sitterReviews {
+    background-color: white;
+    opacity: 95%;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    width: 90%;
+    margin: 10px;
+    padding: 15px;
+    justify-content: center;
+    align-content: center;
+}     */
+
