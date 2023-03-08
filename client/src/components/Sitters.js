@@ -39,22 +39,22 @@ const UserProfile = (props) => {
   const [Certification, setCertification] = useState([
     {
       id: 1,
-      certification: 'CPR'
+      certification: 'We have 3 kids blah blah blah'
     },
-    {
-      id: 2,
-      certification: 'atrophysics'
-    }
+    // {
+    //   id: 2,
+    //   certification: 'First Aid'
+    // }
   ])
   const [Experience, setExperience] = useState([
     {
       id: 1,
-      experience: 'Cooking'
+      experience: 'idk what to put here'
     },
-    {
-      id: 2,
-      experience: 'Great at math'
-    }
+    // {
+    //   id: 2,
+    //   experience: 'Great at math'
+    // }
   ])
 
   const [currentReview, setCurrentReview] = useState([
@@ -108,9 +108,9 @@ const UserProfile = (props) => {
           {/* certification code */}
           <div className='info'>        
             <div className='cert'>
-              <h1> Certifications </h1>
+              <h1> About </h1>
               {Certification.map((post) => (
-                <div>
+                <div className='whiteTextBox'>
                   <li>{post.certification}</li>
                 </div>
               ))}
@@ -119,7 +119,7 @@ const UserProfile = (props) => {
             <div className='exp'>
               <h1> Experience </h1>
               {Experience.map((post) => (
-                <div>
+                <div className='whiteTextBox'>
                   <li>{post.experience}</li>
                 </div>
               ))}
@@ -137,7 +137,7 @@ const UserProfile = (props) => {
       <div className='reviews'>
         <h1> Reviews </h1>
         {currentReview.map((post) => (
-          <div className='sitterReviews'>
+          <div className='whiteTextBox'>
             <h6>Posted by: {post.author}</h6>
             <p>{post.review}</p>
           </div>

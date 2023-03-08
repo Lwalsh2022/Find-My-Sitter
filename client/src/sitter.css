@@ -152,7 +152,8 @@ img {
     border-radius: 10px;
     padding: 10px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #e0e7ed;
+    font-size: 20px;
 }
 
 /* Experience section*/
@@ -167,7 +168,8 @@ img {
     border-radius: 10px;
     padding: 10px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #e0e7ed;
+    font-size: 20px;
 }
     
 
@@ -239,7 +241,7 @@ img {
     background-color: #e0e7ed;
 }
 
-.sitterReviews {
+.whiteTextBox {
     background-color: white;
     opacity: 95%;
     border: 0.5px solid black;
