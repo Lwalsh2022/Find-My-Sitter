@@ -3,13 +3,21 @@ import Nav from './Nav'
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form';
-
-
+import { useMutation } from '@apollo/client';
+import { ADD_USER, LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 // use the prompt 'rafce' to make a boilerplate for a functional component
 
 const LandingPage = () => {
- 
+  const [formState, setFormState] = useState({
+    name: '',
+    email:'',
+    password:'',
+  });
+
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [login, { err, data2 }] = useMutation(LOGIN_USER);
   // eventually this will be a fetch request to the backend
   // also, once you get data from the database about latest jobs, you will want to limit the results
   const [currentPosts, setCurrentPosts] = useState([
@@ -57,7 +65,51 @@ const LandingPage = () => {
 
    ])
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+   const handleFormSignup = async (event) => {
+     event.preventDefault();
+     console.log(formState);
+
+     try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.addUser.token);
+      console.log('You are signed up!');
+     } catch (e) {
+      console.error(e);
+     }
+    };
+
+    const handleFormLogin = async (event) => {
+      event.preventDefault();
+      console.log(formSate);
+      try {
+        const { data } = await login({
+          variables: { ...formState },
+        });
+
+      Auth.login(data.login.token);
+      } catch (e) {
+        console.error(e);
+      }
+      console.log('You are signed in!');
+      //clear form values
+      setFormState({
+        email:'',
+        password: '',
+        name: ''
+      });
+    };
   return (
     <>
       <div id='header' className='right flex-1'></div>
@@ -68,14 +120,14 @@ const LandingPage = () => {
         <div id='loginForms'>
           <div id='signInBox'>
             <h1> Sign In </h1>
-            <Form className="formInfo" id="signInForm">
+            <Form className="formInfo" id="signInForm" onSubmit={handleFormLogin}>
                 <Form.Group controlId="formEmail" className="formItem">
                   <Form.Label></Form.Label> 
-                  <Form.Control placeholder="Enter Email" />
+                  <Form.Control placeholder="Enter Email" name = "email" value={formState.email} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group controlId="formPassword" className="formItem">
                   <Form.Label></Form.Label> 
-                  <Form.Control placeholder="Enter Password" />
+                  <Form.Control placeholder="Enter Password" name ="password" value={formState.password} onChange={handleChange} />
                 </Form.Group>
                 <Button variant="secondary" type="submit" id="signupSubmit">
                   Sign In
@@ -84,18 +136,18 @@ const LandingPage = () => {
           </div>
           <div id='signUpBox'>
             <h1> Sign Up </h1>
-            <Form className="formInfo" id="signUpForm">
+            <Form className="formInfo" id="signUpForm" onSubmit={handleFormSignup}>
                 <Form.Group controlId="formEmail" className="formItem">
                   <Form.Label></Form.Label> 
-                  <Form.Control placeholder="Enter Email" />
+                  <Form.Control placeholder="Enter Email" name ="email"value={formState.email} onChange={handleChange}/>
                 </Form.Group>
                 <Form.Group controlId="formName" className="formItem">
                   <Form.Label></Form.Label> 
-                  <Form.Control placeholder="Enter Name" />
+                  <Form.Control placeholder="Enter Name" name="name" value={formState.name} onChange={handleChange} />
                 </Form.Group>
                 <Form.Group controlId="formPassword" className="formItem">
                   <Form.Label></Form.Label> 
-                  <Form.Control placeholder="Enter Password" />
+                  <Form.Control placeholder="Enter Password" name = "password" value={formState.password} onChange={handleChange}/>
                 </Form.Group>
                 <Button variant="secondary" type="submit" id="signupSubmit">
                   I'm A Parent
