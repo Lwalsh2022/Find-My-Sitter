@@ -19,7 +19,8 @@ const LandingPage = () => {
       description: 'I need a babysitter for my 2 year old son on Friday night from 7-9 pm. I will put him to sleep before you arrive.',
       author: 'Lisa',
       date: 'March 6th',
-      time: '7:10 pm'
+      time: '7:10 pm',
+      comment:"I'm interested!"
     },
     {
       id: 2,
@@ -33,7 +34,9 @@ const LandingPage = () => {
       id: 3,
       title: 'Need babysitter for 2 hours on Sunday',
       description: 'I need a babysitter for my 4 year old son on Sunday, March 12th from 1-4 pm.',
-      author: 'Matt'
+      author: 'Matt',
+      date: '3-4-23',
+      time: '2:16 PM'
     },
     {
       id: 4,
@@ -67,12 +70,12 @@ const LandingPage = () => {
             <h1> Sign In </h1>
             <Form className="formInfo" id="signInForm">
                 <Form.Group controlId="formEmail" className="formItem">
-                  <Form.Label>Email address</Form.Label> 
-                  <Form.Control placeholder="Enter email" />
+                  <Form.Label></Form.Label> 
+                  <Form.Control placeholder="Enter Email" />
                 </Form.Group>
                 <Form.Group controlId="formPassword" className="formItem">
-                  <Form.Label>Password</Form.Label> 
-                  <Form.Control placeholder="Enter password" />
+                  <Form.Label></Form.Label> 
+                  <Form.Control placeholder="Enter Password" />
                 </Form.Group>
                 <Button variant="secondary" type="submit" id="signupSubmit">
                   Sign In
@@ -83,19 +86,22 @@ const LandingPage = () => {
             <h1> Sign Up </h1>
             <Form className="formInfo" id="signUpForm">
                 <Form.Group controlId="formEmail" className="formItem">
-                  <Form.Label>Email address</Form.Label> 
-                  <Form.Control placeholder="Enter email" />
+                  <Form.Label></Form.Label> 
+                  <Form.Control placeholder="Enter Email" />
                 </Form.Group>
                 <Form.Group controlId="formName" className="formItem">
-                  <Form.Label>Name</Form.Label> 
-                  <Form.Control placeholder="Enter name" />
+                  <Form.Label></Form.Label> 
+                  <Form.Control placeholder="Enter Name" />
                 </Form.Group>
                 <Form.Group controlId="formPassword" className="formItem">
-                  <Form.Label>Password</Form.Label> 
-                  <Form.Control placeholder="Enter password" />
+                  <Form.Label></Form.Label> 
+                  <Form.Control placeholder="Enter Password" />
                 </Form.Group>
                 <Button variant="secondary" type="submit" id="signupSubmit">
-                  Sign Up
+                  I'm A Parent
+                </Button>
+                <Button variant="secondary" type="submit" id="signupSubmit">
+                  I'm A Sitter  
                 </Button>
             </Form>
           </div>
@@ -111,6 +117,7 @@ const LandingPage = () => {
               <p>{post.description}</p>
               <p>Posted by: {post.author}</p>
               <p>Posted on: {post.date} at: {post.time}</p>
+              <p>{post.comment}</p>
             </div>
           ))}
         </div>
