@@ -1,6 +1,6 @@
 /* Page background */
 body    {
-    background-color: rgb(226, 235, 243);
+    background-color: rgb(239, 242, 246);
     margin: 0;
 
 }
@@ -46,14 +46,16 @@ img {
     border-radius: 50%;
     border-style: solid;
     width: 25%;
-    margin-left: 10px;
+    margin-left: 40px;
+    height: 150px;
+    width: 150px;
 }
 
 .flexPicture {
     display: flex;
 }
 
-/* Name and Email*/
+/* Users Name and Email*/
 .picName {
     display: flex;
     font-size: 30px;
@@ -69,16 +71,30 @@ img {
 .cert {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin: 40px;
     list-style: none;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
 }
 
 /* Experience */
 .exp {
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    margin: 40px;
     list-style: none;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
 }
 
 /* Lets certification and experience be side by side */
@@ -91,6 +107,13 @@ img {
 .reviews {
     display: flex;
     flex-direction: column;
+    margin: 40px;
+    list-style: none;
     align-items: center;
-    justify-content: center;
+    width: 94%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #e0e7ed;
 }
