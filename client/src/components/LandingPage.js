@@ -3,13 +3,41 @@ import Nav from './Nav'
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form';
+import {useMutation} from '@apollo/client';
+import {SIGN_UP} from '../utils/mutations';
 
 
 
 // use the prompt 'rafce' to make a boilerplate for a functional component
 
 const LandingPage = () => {
- 
+  const [formState, setFormState] = useState({ 
+    email: '', 
+   // fullName: '', 
+    password: '' 
+  });
+  const [signup, { error }] = useMutation(SIGN_UP);
+  const handleInputChange = (event) => {
+       const { name, value } = event.target;
+       setFormState({
+         ...formState, [name]: value});
+       };
+       const handleFormSubmit = async (event) => {
+         event.preventDefault();
+         try {
+           const { data } = await signup({
+             variables: { ...formState },
+           });
+           console.log(data);
+           setFormState({
+             email: '',
+             // fullName: '',
+             password: '',
+           });
+         } catch (e) {
+           console.error(e); 
+         }
+       };
   // eventually this will be a fetch request to the backend
   // also, once you get data from the database about latest jobs, you will want to limit the results
   const [currentPosts, setCurrentPosts] = useState([
@@ -68,7 +96,7 @@ const LandingPage = () => {
         <div id='loginForms'>
           <div id='signInBox'>
             <h1> Sign In </h1>
-            <Form className="formInfo" id="signInForm">
+            <Form className="formInfo" id="signInForm" >
                 <Form.Group controlId="formEmail" className="formItem">
                   <Form.Label></Form.Label> 
                   <Form.Control placeholder="Enter Email" />

@@ -1,8 +1,10 @@
 const { User, Post } = require('../models');
 
 
+// const User = require('../models/Users')
+// const Auth = require('../../../services/auth.service')
+
 const resolvers = {
- 
   Query: {
     users: async () => {
       return await User.find({}).populate('posts');
