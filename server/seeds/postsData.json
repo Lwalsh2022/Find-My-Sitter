@@ -1,0 +1,56 @@
+[
+    {
+        "postTitle":"Babysitter needed Friday night",
+        "postText": "I need a babysitter for 3 children on Friday night from 7-9 pm. I will put him to sleep before you arrive.",
+        "email": "mdlahey@outlook.com",
+        "userName": "mdlahey1",
+        "hourlyRate": 15,
+        "numberOfChildren": 3,
+        "specialNeeds": "Jimmy has asthma"
+    },    
+    {
+        "postTitle":"Babysitter needed Saturday night",
+        "postText": "I need a babysitter from 4-10 PM on 3/10/2023.",
+        "email": "jmoney@gmail.com",
+        "userName": "jmoney1",
+        "hourlyRate": 20,
+        "numberOfChildren": 1,
+        "specialNeeds": "Julia has diabetes"
+    },
+    {
+        "postTitle":"Babysitter needed Monday night",
+        "postText": "I need a babysitter from 4-10 PM on 3/12/2023.",
+        "email": "jmoney@gmail.com",
+        "userName": "jmoney1",
+        "hourlyRate": 20,
+        "numberOfChildren": 1,
+        "specialNeeds": "Julia has diabetes"
+    },
+    {
+        "postTitle":"Babysitter needed 3/10 night",
+        "postText": "I need a babysitter for 2 children on Friday night from 7-9 pm.",
+        "email": "mStanton@gmail.com",
+        "userName": "mStanton1",
+        "hourlyRate": 20,
+        "numberOfChildren": 2,
+        "specialNeeds": "Both children have peanut allergies"
+    },     
+    {
+        "postTitle":"Babysitter needed 3/20 night",
+        "postText": "I need a babysitter for 4 children from 6-10 PM on 3/20..",
+        "email": "lWalsh@gmail.com",
+        "userName": "lWalsh1",
+        "hourlyRate": 13,
+        "numberOfChildren": 2,
+        "specialNeeds": "Both children have peanut allergies"
+    },
+    {
+        "postTitle":"Babysitter needed 3/10 night",
+        "postText": "I need a babysitter for 2 children on Friday night from 7-9 pm. I will put him to sleep before you arrive.",
+        "email": "mRivera@gmail.com",
+        "userName": "mRivera1",
+        "hourlyRate": 10,
+        "numberOfChildren": 2,
+        "specialNeeds": "Both children have peanut allergies"
+    }     
+]

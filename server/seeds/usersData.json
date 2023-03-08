@@ -1,0 +1,32 @@
+[
+    {
+        "fullName": "Matthew Lahey",
+        "email": "mdlahey@outlook.com",
+        "userName": "mdlahey1"
+    },
+    {
+        "fullName": "Jake Marshall",
+        "email": "jmoney@gmail.com",
+        "userName": "jmoney1"        
+    },
+    {
+        "fullName": "Megan Stanton",
+        "email": "mStanton@gmail.com",
+        "userName": "mStanton1"      
+    },
+    {
+        "fullName": "Lisa Walsh",
+        "email": "lWalsh@gmail.com",
+        "userName": "lWalsh1"       
+    },
+    {
+        "fullName": "Gaye Haslam",
+        "email": "gHaslam@gmail.com",
+        "userName": "gHaslam1"     
+    },
+    {
+        "fullName": "Miguel Rivera vega",
+        "email": "mRivera@gmail.com",
+        "userName": "mRivera1"        
+    }
+]
