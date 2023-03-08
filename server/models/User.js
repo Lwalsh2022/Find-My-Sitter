@@ -1,8 +1,9 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new Schema (
     {
-        fullName: {
+        name: {
             type: String,
             required: true,
             trim: true
@@ -13,11 +14,16 @@ const userSchema = new Schema (
             unique: true,
             match: [/.+@.+\..+/, 'Must match an email address!'],
         },
-        userName: {
+        password: {
             type: String,
             required: true,
-            trim: true  
+            minlengh: 5,
         },
+        //userName: {
+         //   type: String,
+         //   required: true,
+         //   trim: true  
+      //  },
         posts: {
             type: [
                 {
@@ -28,7 +34,22 @@ const userSchema = new Schema (
             default: []
         }
     }
-)
+);
+
+userSchema.pre('save', async function (next) {
+    if (this.isNew || this.isModified('password')) {
+        const saltRounds = 10;
+        this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+
+    next();
+
+});
+
+userSchema.methods.isCorrectPassword = async function (password) {
+    return bcrypt.compare(password, this.password);
+
+};
 
 const User = model ('Users', userSchema)
 
