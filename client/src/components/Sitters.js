@@ -62,7 +62,7 @@ const Sitters = (props) => {
     <>
       <div className='header'>
 
-        <h1 className='headerSize'> Sitter Profile </h1>
+        <h1 className='headerSize'></h1>
       </div> 
       <div className='navBar'>
         <h3 className='navBorder'><Nav /></h3>
