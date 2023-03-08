@@ -85,10 +85,16 @@
   background-color: #8c9caa;
   width: 100%;
   padding: 10px;
+  
 }
 
 #signUpBox h1 {
   text-align: center;
+  
+}
+
+#signupSubmit {
+  margin: 10px;
 }
 
 .formInfo {

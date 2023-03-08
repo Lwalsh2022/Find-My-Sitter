@@ -1,0 +1,28 @@
+[
+    {
+        "fullName": "Matthew Lahey",
+        "email": "mdlahey@outlook.com",
+        "userName": "mdlahey1",
+        "posts":[
+            {
+                "postTitle":"Babysitter needed Friday night",
+                "postText": "I need a babysitter for 3 children on Friday night from 7-9 pm. I will put him to sleep before you arrive.",
+            "email": "mdlahey@outlook.com",
+            "hourlyRate": "15",
+            "numberOfChildren": 3,
+            "specialNeeds": "Jimmy has asthma"
+            }]        
+    },
+    {
+        "fullName": "Jake Marshall",
+        "email": "jmoney@gmail.com",
+        "userName": "jmoney1",
+        "posts":[{
+            "postTitle":"Babysitter needed Saturday night",
+            "postText": "I need a babysitter from 4-10 PM on 3/10/2023.",
+            "email": "jmoney@gmail.com",
+            "hourlyRate": "20",
+            "numberOfChildren": 1,
+            "specialNeeds": "Julia has diabetes"
+            }]        
+    },

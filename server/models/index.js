@@ -1,7 +1,5 @@
-//const Parents = require('./Parents');
-//const Reviews = require('./Reviews');
-//const Sitters = require('./Sitters');
-//const Posts = require('./Posts');
-const Users = require('./Users')
+const User = require('./User')
+const Post = require('./User')
 
-module.exports = { Users };
+
+module.exports = { User, Post };
