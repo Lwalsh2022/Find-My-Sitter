@@ -99,8 +99,8 @@ const UserProfile = (props) => {
             <div className='picName'> 
               {currentName.map((post) => (
                 <div>
-                  <h1 className='nameSize'>{post.fullName}</h1>
-                  <h1 className='email'>{post.email}</h1>
+                  <h1 className='info'>{post.fullName}</h1>
+                  <h1 className='info'>{post.email}</h1>
                 </div>
               ))}
             </div>

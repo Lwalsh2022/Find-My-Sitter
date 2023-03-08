@@ -97,7 +97,7 @@ body    {
     
 }
 
-/* users profile picture */
+/* users profile picture styling */
 img {
     border-radius: 50%;
     border-style: solid;
@@ -107,13 +107,14 @@ img {
     width: 150px;
 }
 
+/* profile picture div styling */
 .flexPicture {
-    /* display: flex;
-    padding-top: 3%;
+    display: flex;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #8c9caa;
-    margin: 2%;  */
+    background-color: #e0e7ed;
+    margin: 28px; 
+    flex-direction: row;
 }
 
 /* Users Name and Email*/
@@ -127,23 +128,26 @@ img {
     align-items: center;  */
 }
 
-.nameSize {
-    font-size: 60px;
+.info {
+    font-size: 30px;
+    margin: 30px;
+    
 }
 
 /* Email */
 .email {
-    font-size: 40px;
+    /* font-size: 40px;
+    margin: 30px; */
 }
 
 /* Certifications */
 .cert {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 0px;
     list-style: none;
     align-items: center;
-    width: 95%;
+    width: 100%;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
@@ -155,10 +159,10 @@ img {
 .exp {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 0px;
     list-style: none;
     align-items: center;
-    width: 95%;
+    width: 100%;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
@@ -224,10 +228,10 @@ img {
 .reviews {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 25px;
     list-style: none;
     align-items: center;
-    width: 94%;
+    width: 95.5%;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
