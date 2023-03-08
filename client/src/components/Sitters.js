@@ -71,6 +71,24 @@ const UserProfile = (props) => {
   return (
     <>
       <div className='header'>
+
+        <h1 className='headerSize'></h1>
+      </div> 
+      <div className='navBar'>
+        <h3 className='navBorder'><Nav /></h3>
+      </div>
+      {/* prfile picture / name / email code  */}
+      <div className='flexPicture'>
+        <img src={pfp} alt = "profile picture"></img>
+        <div className='picName'> 
+          {currentName.map((post) => (
+            <div>
+              <h1>{post.firstName} {post.lastName}</h1>
+              <h1 className='email'>{post.email}</h1>
+            </div>
+          ))}
+        </div>
+
         <div className='webButtons'><Nav /></div>
         {userName.map((post) => (
           <h1 className='headerSize'> {post.userName} </h1>

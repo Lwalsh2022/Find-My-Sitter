@@ -14,8 +14,8 @@
 } */
 
 #navBar {
-  background-color: #424f5c;
-  color: #e8e7e6;
+  background-color: #858c93;
+  color: #white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,7 +69,7 @@
 #signInBox {
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #8c9caa;
+  background-color: #e0e7ed;
   width: 100%;
   margin-bottom: 20px;
   padding: 10px;
@@ -82,7 +82,7 @@
 #signUpBox {
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #8c9caa;
+  background-color: #e0e7ed;
   width: 100%;
   padding: 10px;
   
@@ -115,7 +115,7 @@
   width: 70%;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #8c9caa;
+  background-color: #e0e7ed;
   display: flex;
   align-items: center;
   justify-content: center;
