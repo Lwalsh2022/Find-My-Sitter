@@ -7,7 +7,7 @@ const { User, Post } = require('../models');
 const resolvers = {
   Query: {
     users: async () => {
-      return await User.find({}).populate('posts');
+      return await User.find({});
     },
     user: async(parent, args) => {
       return await User.findById(args.id);
@@ -16,7 +16,7 @@ const resolvers = {
       return await Post.find({});
     },
     post: async(parent,args) => {
-      return await Post.findbyId(args.id)
+      return await Post.findById(args.id)
     }
   },
 
@@ -39,11 +39,11 @@ const resolvers = {
       return await User.findOneAndDelete({ id });
     },
 
-    addPost: async (parent, { postTitle, postText, email, hourlyRate, numberOfChildren, specialNeeds }) => {
-      return await Post.create({ postTitle, postText, email, hourlyRate, numberOfChildren, specialNeeds});
+    addPost: async (parent, { postTitle, postText, email, userName, hourlyRate, numberOfChildren, specialNeeds }) => {
+      return await Post.create({ postTitle, postText, email, userName, hourlyRate, numberOfChildren, specialNeeds});
     },
 
-    updatePost: async (parent, { id, postTitle, postText, email, hourlyRate, numberOfChildren, specialNeeds}) => {
+    updatePost: async (parent, { id, postTitle, postText, email, userName, hourlyRate, numberOfChildren, specialNeeds}) => {
       return await Post.findOneAndUpdate(
         { _id: id },
         { postTitle},

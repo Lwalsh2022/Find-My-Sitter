@@ -16,74 +16,100 @@ import Form  from 'react-bootstrap/Form';
   </body>
 </head>
 
-const Sitters = (props) => {
+const UserProfile = (props) => {
 
   // eventually this will be a fetch request to the backend
   // also, once you get data from the database about latest jobs, you will want to limit the results
   const [currentName, setName] = useState([
     {
       id: 1,
-      firstName: 'Anna',
-      lastName: 'Martinez',
+      fullName: 'Anna Martinez',
       email: 'annamart123@gmail.com',
     },
 
   ])
 
-  const [Certification, setCertification] = useState([
+  const [userName, setuserName] = useState([
     {
       id: 1,
-      certification: 'CPR'
-    },
-    {
-      id: 2,
-      certification: 'atrophysics'
-    }
-  ])
-  const [Experience, setExperience] = useState([
-    {
-      id: 1,
-      experience: 'Cooking'
-    },
-    {
-      id: 2,
-      experience: 'Great at math'
+      userName: 'Azenitram',
     }
   ])
 
-  const [currentReview, setCurrentReview] = useState([
-    {
-      id: 1,
-      review: 'Very Good',
-      author: 'Lisa'
-    },
+  // const [Certification, setCertification] = useState([
+  //   {
+  //     id: 1,
+  //     certification: 'CPR'
+  //   },
+  //   {
+  //     id: 2,
+  //     certification: 'atrophysics'
+  //   }
+  // ])
+  // const [Experience, setExperience] = useState([
+  //   {
+  //     id: 1,
+  //     experience: 'Cooking'
+  //   },
+  //   {
+  //     id: 2,
+  //     experience: 'Great at math'
+  //   }
+  // ])
 
-  ])
+  // const [currentReview, setCurrentReview] = useState([
+  //   {
+  //     id: 1,
+  //     review: 'Very Good',
+  //     author: 'Lisa'
+  //   },
+
+  // ])
   const location = useLocation();
 
   console.log("current posts data", props.location)
   return (
     <>
       <div className='header'>
-      <div><Nav /></div>
-        <h1 className='headerSize'> Sitter Profile </h1>
+
+        <h1 className='headerSize'></h1>
+      </div> 
+      <div className='navBar'>
+        <h3 className='navBorder'><Nav /></h3>
       </div>
-      <div className='textinputFlex'>  
+      {/* prfile picture / name / email code  */}
+      <div className='flexPicture'>
+        <img src={pfp} alt = "profile picture"></img>
+        <div className='picName'> 
+          {currentName.map((post) => (
+            <div>
+              <h1>{post.firstName} {post.lastName}</h1>
+              <h1 className='email'>{post.email}</h1>
+            </div>
+          ))}
+        </div>
+
+        <div className='webButtons'><Nav /></div>
+        {userName.map((post) => (
+          <h1 className='headerSize'> {post.userName} </h1>
+        ))}
+      </div>
+      {/* <div className='textinputFlex'>   */}
         {/* prfile picture / name / email code  */}
-        <div className='backGround'>
+        {/* <div className='backGround'> */}
           <div className='flexPicture'>
             <img src={pfp} alt = "profile picture"></img>
             <div className='picName'> 
               {currentName.map((post) => (
                 <div>
-                  <h1>{post.firstName} {post.lastName}</h1>
+                  <h1 className='nameSize'>{post.fullName}</h1>
                   <h1 className='email'>{post.email}</h1>
                 </div>
               ))}
             </div>
           </div>
           {/* certification code */}
-          <div className='info'>        
+          {/* <div className='info'>        
             <div className='cert'>
               <h1> Certifications </h1>
               {Certification.map((post) => (
@@ -91,9 +117,9 @@ const Sitters = (props) => {
                   <li>{post.certification}</li>
                 </div>
               ))}
-          </div>
+            </div> */}
             {/* experience code  */}
-            <div className='exp'>
+            {/* <div className='exp'>
               <h1> Experience </h1>
               {Experience.map((post) => (
                 <div>
@@ -102,8 +128,8 @@ const Sitters = (props) => {
               ))}
             </div>
           </div>
-        </div>
-        <div className='inputFlex'>
+        </div> */}
+        {/* <div className='inputFlex'>
           <div className='certInputMargin'>
             <h3>Certification</h3>
             <Form.Group className="certInput">
@@ -124,10 +150,10 @@ const Sitters = (props) => {
               Submit Experiences
             </button>
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       {/* reviews code */}
-      <div className='reviews'>
+      {/* <div className='reviews'>
         <h1> Reviews </h1>
         {currentReview.map((post) => (
           <div className='sitterReviews'>
@@ -135,9 +161,9 @@ const Sitters = (props) => {
             <p>{post.review}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   )
 }
 
-export default Sitters;
+export default UserProfile;

@@ -10,7 +10,7 @@ const userSchema = new Schema (
         email: {
             type: String,
             required: true,
-            unique: tru,
+            unique: true,
             match: [/.+@.+\..+/, 'Must match an email address!'],
         },
         userName: {
@@ -18,12 +18,15 @@ const userSchema = new Schema (
             required: true,
             trim: true  
         },
-        posts: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Class'
-            }
-        ]
+        posts: {
+            type: [
+                {
+                    type: Schema.Types.ObjectId,
+                    ref: 'Post'
+                }
+            ],
+            default: []
+        }
     }
 )
 
