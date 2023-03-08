@@ -17,6 +17,11 @@ const postSchema = new Schema (
             type: String,
             required: true
         },
+        userName: {
+            type: String,
+            required: true,
+            trim: true
+        },
         hourlyRate: {
             type: Number,
             required: true
@@ -28,6 +33,10 @@ const postSchema = new Schema (
         specialNeeds: {
             type: String,
             trim: true
+        },
+        user: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
         },
         createdAt: {
             type: Date,
