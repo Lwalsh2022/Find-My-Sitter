@@ -3,7 +3,7 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  createdHttpLink,
+  createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -65,7 +65,7 @@ function App() {
 
 
   return (
-    <ApolloProvider client=(client)>
+    <ApolloProvider client={client}>
     <Router>
       <Routes>
         {/* <Route path="/" element={<navBar />} /> */}
@@ -73,7 +73,7 @@ function App() {
         <Route path="/sitters" element={<Sitters />} />
       </Routes>
     </Router>
-    <ApolloProvider>
+    </ApolloProvider>
     
      
 
