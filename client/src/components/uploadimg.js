@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { storage } from './firebase';
 import { ref, uploadBytes, listAll, getDownloadURL } from 'firebase/storage';
 import { v4 } from 'uuid';
+import Button from 'react-bootstrap/Button';
+
 
 function Upload() {
   const [imageUpload, setImageUpload] = useState(null);
@@ -34,7 +36,7 @@ function Upload() {
         setImageUpload(event.target.files[0]);
       }} 
     />
-    <button onClick={uploadImage}> Upload Image</button>
+    <Button variant="secondary" type="submit" id="uploadButton" onClick={uploadImage}> Upload Image</Button>
 
     {imageList.map((url) => {
       return <img src={url} />;

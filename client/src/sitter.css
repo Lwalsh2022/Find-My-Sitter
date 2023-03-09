@@ -119,6 +119,16 @@ img {
     flex-direction: row;
 }
 
+#uploadButton {
+    display: flex;
+    /* align-items: right; */
+    flex-direction: row;
+    margin-left: 200px;
+    margin-top: 10px;
+    
+    
+}
+
 /* Users Name and Email*/
 .picName {
     /* display: flex;
