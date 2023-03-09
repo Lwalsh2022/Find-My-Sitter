@@ -7,20 +7,24 @@ body    {
 
 /* sitter profile header */
 .header {
-
-    background-color: 858c93;
-    border-style: solid;
+    /* background-color: rgb(21, 21, 21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px; */
+    /* border-style: solid;
     border-top: 10px;
     background-color: #424f5c;
     border-style: solid;
     border-top: 10px;
     border-left: 10px;
     border-right: 10px;
-    border-width: 3px;
+    border-width: 3px;  */
 }
 
 .headerSize {
-    font-size: 50px;
+    /* font-size: 50px;
     display: flex;
     flex-wrap: wrap;
 
@@ -30,29 +34,39 @@ body    {
     margin: 0;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    margin-left: 5%;
+    margin-left: 5%; */
 
     
 }
 
-/* Nav bar */
+/* Nav bar at top with icons*/
 
 .navBar {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 10px;
-    position: relative;
-    bottom: 30px;
+  background-color: white;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 45px;
+  margin: 25px;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  
 }
 
+/* white border not needed */
 .navBorder {
-    border-style: solid;
+    /* border-style: solid;
     border-width: 3px;
     border-radius: 3px;
-    border-top: 10px; 
+    border-top: 10px;  */
 }
+
+/* turning this on messes up the styling for some reason? */
 #navSitter {
-    background-color: #424f5c;
+    /* background-color: #424f5c;
     color: #e8e7e6;
     display: flex;
     align-items: center;
@@ -61,24 +75,31 @@ body    {
     padding-left: 20px;
     padding-right: 20px;
     margin-right: 5%;
-    margin-left: 78%;
+    margin-left: 78%; */
 }
-
+/* turning this off messes up the apsect ratio of the icons in the nav? */
 #navSitter img {
-    width: 100px;
+    /* width: 100px; */
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  
 }
 
 .backGround {
-    border: 1px solid black;
+    /* border: 1px solid black;
     border-radius: 10px;
     background-color: #8c9caa;
     margin: 2%;
     padding-bottom: 5%;
-    display: flex;
+    display: flex; */
     
 }
 
-/* profile picture */
+/* users profile picture styling */
 img {
     border-radius: 50%;
     border-style: solid;
@@ -88,40 +109,44 @@ img {
     width: 150px;
 }
 
+/* profile picture div styling */
 .flexPicture {
     display: flex;
-    padding-top: 3%;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #8c9caa;
-    margin: 2%; 
+    background-color: #e0e7ed;
+    margin: 28px; 
+    flex-direction: row;
 }
 
 /* Users Name and Email*/
 .picName {
-    display: flex;
+    /* display: flex;
     font-size: 30px;
      margin-left: 40px;
     padding-top: 5%;
     padding-left: 3%;
     justify-content: center;
-    align-items: center; 
+    align-items: center;  */
 }
 
-.nameSize {
-    font-size: 60px;
+.info {
+    font-size: 30px;
+    margin: 30px;
+    
 }
 
 /* Email */
 .email {
-    font-size: 40px;
+    /* font-size: 40px;
+    margin: 30px; */
 }
 
 /* Certifications */
 .cert {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 0px;
     list-style: none;
     align-items: center;
     width: 100%;
@@ -129,14 +154,15 @@ img {
     border-radius: 10px;
     padding: 10px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #e0e7ed;
+    font-size: 20px;
 }
 
-/* Experience */
+/* Experience section*/
 .exp {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 0px;
     list-style: none;
     align-items: center;
     width: 100%;
@@ -144,70 +170,72 @@ img {
     border-radius: 10px;
     padding: 10px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #e0e7ed;
+    font-size: 20px;
 }
+    
 
 /* Lets certification and experience be side by side */
 .info {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 5%;
     margin-top: 4%;
     width: 2%;
-    padding: 10px;
+    padding: 10px; */
     
 }
 
-/* Text box flex */
+/* Text box forms we don't need */
 .textinputFlex {
-    display: flex;
-    margin-bottom: 7%;
+    /* display: flex;
+    margin-bottom: 7%;  */
 }
 
 .inputFlex {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     margin-left: 10%;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #8c9caa;
     padding: 10px;
-    margin-top: 7%;
+    margin-top: 7%; */
 }
 
 .certInput {
-    border: 1px solid black;
+    /* border: 1px solid black;
     border-radius: 5px;
-    background-color: #f9fafb;
+    background-color: #f9fafb; */
 }
 
 .certInputMargin {
-    margin-bottom: 50%;
+     /* margin-bottom: 50%; */
 }
 
 .expInput {
-    border: 1px solid black;
+    /* border: 1px solid black;
     border-radius: 5px;
     background-color: #f9fafb;
-    margin-top: 20px;
+    margin-top: 20px; */
     
 }
 
 .button {
-    border-radius: 10px;
+    /* border-radius: 10px;
     border-style: solid;
-    border-color: #000;
-} */
+    border-color: #000; */
+} 
 
-/* Reviews */
+/* Reviews section at bottom */
 .reviews {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 25px;
     list-style: none;
     align-items: center;
-    width: 94%;
+    width: 95.5%;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
@@ -215,7 +243,7 @@ img {
     background-color: #e0e7ed;
 }
 
-.sitterReviews {
+.whiteTextBox {
     background-color: white;
     opacity: 95%;
     border: 0.5px solid black;
@@ -227,3 +255,14 @@ img {
     align-content: center;
 }     
 
+#whatIsThis {
+    color: red;
+}
+
+#whatIsIt {
+    color: green;
+}
+
+#whereIsThis {
+    color: blue;
+}

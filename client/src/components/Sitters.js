@@ -36,132 +36,113 @@ const UserProfile = (props) => {
     }
   ])
 
-  // const [Certification, setCertification] = useState([
-  //   {
-  //     id: 1,
-  //     certification: 'CPR'
-  //   },
-  //   {
-  //     id: 2,
-  //     certification: 'atrophysics'
-  //   }
-  // ])
-  // const [Experience, setExperience] = useState([
-  //   {
-  //     id: 1,
-  //     experience: 'Cooking'
-  //   },
-  //   {
-  //     id: 2,
-  //     experience: 'Great at math'
-  //   }
-  // ])
+  const [Certification, setCertification] = useState([
+    {
+      id: 1,
+      certification: 'We have 3 kids blah blah blah'
+    },
+    // {
+    //   id: 2,
+    //   certification: 'First Aid'
+    // }
+  ])
+  const [Experience, setExperience] = useState([
+    {
+      id: 1,
+      experience: 'idk what to put here'
+    },
+    // {
+    //   id: 2,
+    //   experience: 'Great at math'
+    // }
+  ])
 
-  // const [currentReview, setCurrentReview] = useState([
-  //   {
-  //     id: 1,
-  //     review: 'Very Good',
-  //     author: 'Lisa'
-  //   },
+  const [currentReview, setCurrentReview] = useState([
+    {
+      id: 1,
+      review: 'Very Good',
+      author: 'Lisa'
+    },
 
-  // ])
+  ])
   const location = useLocation();
 
   console.log("current posts data", props.location)
   return (
     <>
-      <div className='header'>
-
-        <h1 className='headerSize'></h1>
-      </div> 
+     
       <div className='navBar'>
         <h3 className='navBorder'><Nav /></h3>
       </div>
       {/* prfile picture / name / email code  */}
-      <div className='flexPicture'>
-        <img src={pfp} alt = "profile picture"></img>
+      <div className='flexPicture' id="whatIsIt">
+        
         <div className='picName'> 
           {currentName.map((post) => (
             <div>
-              <h1>{post.firstName} {post.lastName}</h1>
-              <h1 className='email'>{post.email}</h1>
+              {/* <h1>{post.firstName} {post.lastName}</h1> */}
+              {/* <h1 className='email'>{post.email}</h1> */}
             </div>
           ))}
         </div>
 
-        <div className='webButtons'><Nav /></div>
-        {userName.map((post) => (
+        {/* <div className='webButtons' id="whatIsThis"><Nav /></div> */}
+        {/* {userName.map((post) => (
           <h1 className='headerSize'> {post.userName} </h1>
-        ))}
+        ))} */}
       </div>
-      {/* <div className='textinputFlex'>   */}
+      <div className='textinputFlex'>   
         {/* prfile picture / name / email code  */}
-        {/* <div className='backGround'> */}
-          <div className='flexPicture'>
+        <div className='backGround'>
+          <div className='flexPicture' id="whereIsThis">
             <img src={pfp} alt = "profile picture"></img>
             <div className='picName'> 
               {currentName.map((post) => (
                 <div>
-                  <h1 className='nameSize'>{post.fullName}</h1>
-                  <h1 className='email'>{post.email}</h1>
+                  <h1 className='info'>{post.fullName}</h1>
+                  <h1 className='info'>{post.email}</h1>
                 </div>
               ))}
             </div>
           </div>
           {/* certification code */}
-          {/* <div className='info'>        
+          <div className='info'>        
             <div className='cert'>
-              <h1> Certifications </h1>
+              <h1> About </h1>
               {Certification.map((post) => (
-                <div>
+                <div className='whiteTextBox'>
                   <li>{post.certification}</li>
                 </div>
               ))}
-            </div> */}
+            </div>
             {/* experience code  */}
-            {/* <div className='exp'>
+            <div className='exp'>
               <h1> Experience </h1>
               {Experience.map((post) => (
-                <div>
+                <div className='whiteTextBox'>
                   <li>{post.experience}</li>
                 </div>
               ))}
             </div>
           </div>
-        </div> */}
-        {/* <div className='inputFlex'>
-          <div className='certInputMargin'>
-            <h3>Certification</h3>
-            <Form.Group className="certInput">
-              <Form.Label>Enter Certifications</Form.Label> 
-              <Form.Control className="djpad" placeholder="Enter Certifications" />
-            </Form.Group>
-            <button variant="secondary" type="submit" className='button'>
-              Submit Certifications
-            </button>
-          </div>
+        </div>
+        <div className='inputFlex'>
+          
           <div className='expInputMargin'>
-            <h3>Experience</h3>
-            <Form.Group className="expInput">
-              <Form.Label>Enter Experience</Form.Label> 
-              <Form.Control placeholder="Enter Experience" />
-            </Form.Group>
-            <button variant="secondary" type="submit" className='button'>
-              Submit Experiences
-            </button>
+            
           </div>
-        </div> */}
-      {/* </div> */}
+        </div>
+      </div>
       {/* reviews code */}
-      {/* <div className='reviews'>
+      <div className='reviews'>
         <h1> Reviews </h1>
         {currentReview.map((post) => (
-          <div className='sitterReviews'>
+          <div className='whiteTextBox'>
             <h6>Posted by: {post.author}</h6>
             <p>{post.review}</p>
           </div>
         ))}
-      </div> */}
+      </div>
     </>
   )
 }

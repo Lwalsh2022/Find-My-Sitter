@@ -14,8 +14,8 @@
 }
 
 #navBar {
-  background-color: #858c93;
-  color: white;
+  background-color: white;
+  /* color: white; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +33,7 @@
   width: 100px;
   padding: 10px;
   text-decoration: none;
-  color: #424f5c
+  color: black
 }
 
 .headerImage img {
