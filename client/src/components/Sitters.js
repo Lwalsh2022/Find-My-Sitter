@@ -5,6 +5,7 @@ import pfp from '../imgs/profileicon.jpg'
 import '../sitter.css'
 import Button from 'react-bootstrap/Button';
 import Form  from 'react-bootstrap/Form';
+import Uploads from './uploadimg'
 
 
 
@@ -95,7 +96,8 @@ const UserProfile = (props) => {
         {/* prfile picture / name / email code  */}
         <div className='backGround'>
           <div className='flexPicture' id="whereIsThis">
-            <img src={pfp} alt = "profile picture"></img>
+            {/* <img src={pfp} alt = "profile picture"></img> */}
+            <Uploads />
             <div className='picName'> 
               {currentName.map((post) => (
                 <div>
