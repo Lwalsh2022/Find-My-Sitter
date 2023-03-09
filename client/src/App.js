@@ -65,7 +65,7 @@ function App() {
 
 
   return (
-    <ApolloProvider client=(client)>
+    <ApolloProvider client={client}>
     <Router>
       <Routes>
         {/* <Route path="/" element={<navBar />} /> */}
@@ -73,7 +73,7 @@ function App() {
         <Route path="/sitters" element={<Sitters />} />
       </Routes>
     </Router>
-    <ApolloProvider>
+    </ApolloProvider>
     
      
 
