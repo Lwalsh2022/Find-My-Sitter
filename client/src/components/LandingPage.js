@@ -92,7 +92,7 @@ const LandingPage = () => {
 
     const handleFormLogin = async (event) => {
       event.preventDefault();
-      console.log(formSate);
+      console.log(formState);
       try {
         const { data } = await login({
           variables: { ...formState },

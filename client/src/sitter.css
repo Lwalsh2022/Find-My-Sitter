@@ -42,8 +42,8 @@ body    {
 /* Nav bar at top with icons*/
 
 .navBar {
-  background-color: #858c93;
-  color: white;
+  background-color: white;
+  /* color: white; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +53,7 @@ body    {
   border-radius: 10px;
   border: 1px solid black;
   text-decoration: none;
-  margin: 20px;
+  
 }
 
 /* white border not needed */
@@ -84,7 +84,9 @@ body    {
   width: 100px;
   padding: 10px;
   text-decoration: none;
-  color: #858c93
+  color: black;
+  align-items: center;
+  
 }
 
 .backGround {
